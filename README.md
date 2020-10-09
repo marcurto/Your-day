@@ -28,7 +28,7 @@ Extra features you want to add once your MVP is done
 
 ## Wireframes
 
-![](css\images\faqs-2.png)
+<img src="css\images\faqs-2.png" />
 
 ## 
 
