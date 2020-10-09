@@ -28,7 +28,7 @@ Extra features you want to add once your MVP is done
 
 ## Wireframes
 
-List of pages, and/or link to your sketchs
+![](css\images\faqs-2.png)
 
 ## 
 
@@ -40,7 +40,9 @@ Classes and methods definition
 
 ## APIs
 
-The API(s) you are using
+The API(s) that I am using:
+
+- https://best-songs2.herokuapp.com
 
 ## 
 
@@ -50,13 +52,13 @@ The API(s) you are using
 
 ### Trello (list of tasks)
 
-[Link url](https://trello.com)
+[https://trello.com/b/M7gKfuzv/ironhack-module-1](https://trello.com)
 
 ### 
 
 ### Github
 
-URls for the project repo and deploy [Link Repo](http://github.com) [Link Deploy](http://github.com)
+https://github.com/marcurto/ProyectoIronHack
 
 ### 
 
