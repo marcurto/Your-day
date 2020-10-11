@@ -52,7 +52,7 @@ The API(s) that I am using:
 
 ### Trello (list of tasks)
 
-[https://trello.com/b/M7gKfuzv/ironhack-module-1](https://trello.com)
+[https://trello.com/b/M7gKfuzv/ironhack-module-1](https://trello.com/b/M7gKfuzv/ironhack-module-1)
 
 ### 
 

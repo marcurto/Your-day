@@ -1,0 +1,266 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.67em;
+}
+
+header {
+  height: 100vh;
+  background-color: green;
+}
+
+section {
+  /* background-color: yellow; */
+  /* border: 1px solid black; */
+}
+
+footer {
+  background-color: grey;
+  height: 15vh;
+}
+
+.section-content {
+  height: 100vh;
+}
+
+#home-header {
+  background-image: url("images/jez-timms-_Ch_onWf38o-unsplash.jpg");
+  background-size: cover;
+}
+
+#last-section {
+  height: 85vh;
+}
+
+/* Discover page alternative
+
+.external {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 90vh;
+  margin-left: 10px;
+}
+
+.left-part {
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  background-color: rgb(248, 245, 244);
+
+  margin: 50px 10px 10px 0px;
+}
+
+.right-part {
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0px 50px 10px;
+}
+
+.fragment-part {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.rectangle {
+  height: 100%;
+  background-image: url("images/micro.jpg");
+  background-size: cover;
+  margin: 0px 10px 10px 10px;
+}
+
+.squares {
+  display: flex;
+  height: 60vh;
+  width: 100%;
+}
+
+.square {
+  width: 100%;
+  margin: 10px 10px 0px 10px;
+}
+
+.appaering-content:hover {
+  border: 1px black solid;
+  background-color: rgba(0, 0, 0, 0.801);
+  z-index: 2;
+}
+
+#left-square {
+  background-image: url("images/headphones.jpg");
+  background-size: cover;
+  display: flex;
+}
+
+#rigth-square {
+  background-image: url("images/casette2.jpg");
+  background-size: cover;
+}
+
+.discover-content {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.534);
+  transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+.discover-content:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.carousel-item {
+  background-color: rgb(241, 240, 239);
+} */
+
+/*Discover page */
+.row {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.box {
+  height: 100%;
+  width: 33%;
+  overflow: hidden;
+}
+.back {
+  top: 100%;
+  position: relative;
+  transition: all 0.3s ease-out;
+  background: white;
+  height: 100%;
+}
+
+.box:hover > .back {
+  top: 0;
+}
+
+#songs {
+  background: #ffc728;
+}
+#movies {
+  background: #2860ff;
+}
+
+#books {
+  background: #ff2860;
+}
+
+#songs2 {
+  background: #ee4266;
+}
+#movies2 {
+  background: #ffd23f;
+}
+
+#books2 {
+  background: #3b76ce;
+}
+
+#songs3 {
+  background: #8de7ab;
+}
+#movies3 {
+  background: #e9778b;
+}
+
+#books3 {
+  background: #58d2e2;
+}
+
+/* Sign up page */
+.signup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+ }
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-radius: 3%;
+  border: 2px solid rgba(212, 34, 153, 0.555);
+  background: rgb(36,0,24);
+  background: linear-gradient(97deg, rgba(36,0,24,0.22936498818277307) 0%, rgba(255,40,96,1) 0%, rgba(255,0,137,0.40303445596988796) 100%);
+}
+.form-wrapper > form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+}
+.signup form {
+  
+}
+.signup form input{
+
+}
+
+/* Log in page */
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+ }
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border-radius: 3%;
+  border: 2px solid rgba(212, 34, 153, 0.555);
+  background: rgb(36,0,24);
+  background: linear-gradient(97deg, rgba(36,0,24,0.22936498818277307) 0%, rgba(255,40,96,1) 0%, rgba(255,0,137,0.40303445596988796) 100%);
+}
+.form-wrapper > form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+}
+.login form {
+  
+}
+.login form input{
+
+}
+
+/* FaQs page */
