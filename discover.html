@@ -10,52 +10,75 @@
   <div class="row">
     <div id="songs" class="box">
       <div class="back">
-        <h1>prueva</h1>
+        <h3>La canción más escuchada el día que naciste fue...</h3>
+        <h2 id="song-name"></h2>
+        <iframe
+          width="560"
+          height="315"
+          src="//www.youtube.com/embed/58-atNakMWw"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <button onclick="showPopup('#music')" id="btn-song">Descubrir más</button>
       </div>
     </div>
+
     <div id="movies" class="box">
       <div class="back">
-        <h1>prueva</h1>
+        <h3>La película más vista el día que naciste fue...</h3>
+        <h2 id="movie-name"></h2>
+        <iframe
+          width="560"
+          height="315"
+          src="//www.youtube.com/embed/58-atNakMWw"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+
+        <button onclick="showPopup('#movie')">Descubrir más</button>
       </div>
     </div>
+
     <div id="books" class="box">
       <div class="back">
-        <h1>prueva</h1>
+        <h3>El libro de ficción más leído el día que naciste fue...</h3>
+        <h2 id="fiction-book-name"></h2>
+        <iframe
+          width="560"
+          height="315"
+          src="//www.youtube.com/embed/58-atNakMWw"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+
+        <button onclick="showPopup('#fiction-books')">Descubrir más</button>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div id="songs2" class="box">
-      <div class="back">
-        <h1>prueva</h1>
-      </div>
+
+  <div>
+    <div class="full-screen hidden flex-container-center" id="music">
+      <h2>Let me music you about this thing!!</h2>
+      <button onclick="closePopup('#music')">Close Popup!</button>
     </div>
-    <div id="movies2" class="box">
-      <div class="back">
-        <h1>prueva</h1>
-      </div>
+    <div class="full-screen hidden flex-container-center" id="movie">
+      <h2>Let me movie you about this thing!!</h2>
+      <button onclick="closePopup('#movie')">Close Popup!</button>
     </div>
-    <div id="books2" class="box">
-      <div class="back">
-        <h1>prueva</h1>
-      </div>
+    <div class="full-screen hidden flex-container-center" id="fiction-books">
+      <h2>Let me book you about this thing!!</h2>
+      <button onclick="closePopup('#fiction-books')">Close Popup!</button>
     </div>
   </div>
-  <div class="row">
-    <div id="songs3" class="box">
-      <div class="back">
-        <h1>prueva</h1>
-      </div>
-    </div>
-    <div id="movies3" class="box">
-      <div class="back">
-        <h1>prueva</h1>
-      </div>
-    </div>
-    <div id="books3" class="box">
-      <div class="back">
-        <h1>prueva</h1>
-      </div>
-    </div>
-  </div>
+  <script src="scripts/apiservice.js"></script>
+  <script>
+    function showPopup(id) {
+      document.querySelector(id).classList.remove("hidden");
+      console.log(songs_all);
+    }
+
+    function closePopup(id) {
+      document.querySelector(id).classList.add("hidden");
+    }
+  </script>
 </body>
