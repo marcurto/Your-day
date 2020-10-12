@@ -28,15 +28,15 @@ async function getFictionBooks() {
 }
 getFictionBooks();
 
-// async function getGeniusElements(){
-//     var CLIENTID = "zo3DOUN6FiuLgkV3dNHrgaj113LqaYweTJODBfdobdCEKHLopbYyhvitTefvrjRL";
-//     var CLIENTSECRET = "6ArCdcGqhCnH_ZzYCuYEfbA7XWpBtpXFMVverCl-_9Bq3-zhcoTRBpAnkA4fO4DiRGhkymiL7hJpIidUcYYOiA";
-//     var accessToken= "C3u6_zMj-ydh47rQTU5KJ4FcBP0G-VyFEtQRZdmNcLPncQieWm9jP6mpYTf6UJuN";
-//     var API = "https://api.genius.com/search";
-//     var APISong = "https://api.genius.com/songs/";
-//     var songID = "2471960";
-//     var maxSong= 2471960; 
-// }
+
+
+async function getGeniusElements(){
+    var CLIENTID = "zo3DOUN6FiuLgkV3dNHrgaj113LqaYweTJODBfdobdCEKHLopbYyhvitTefvrjRL";
+    var CLIENTSECRET = "6ArCdcGqhCnH_ZzYCuYEfbA7XWpBtpXFMVverCl-_9Bq3-zhcoTRBpAnkA4fO4DiRGhkymiL7hJpIidUcYYOiA";
+    var accessToken= "C3u6_zMj-ydh47rQTU5KJ4FcBP0G-VyFEtQRZdmNcLPncQieWm9jP6mpYTf6UJuN";
+    var API = "https://api.genius.com/search";
+    var APISong = "https://api.genius.com/songs/";
+}
 
 
 
@@ -50,6 +50,7 @@ function generateHTMLsongs(data, date) {
         return false;
     })
     document.getElementById('song-name').innerHTML = songDate[0].songTitle;
+    document.getElementById('album-name').innerHTML = 'Cantante: ' + songDate[0].artist;
 
     console.log(songDate)
 }
@@ -78,6 +79,7 @@ function generateHTMLfictionbooks(data, date) {
         return false;
     })
     document.getElementById('fiction-book-name').innerHTML = fictionBookDate[0].title
+    document.getElementById('writter-name').innerHTML = fictionBookDate[0].author
 
     console.log(fictionBookDate)
 }

@@ -3,70 +3,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="css/style.css" />
-  <title>Your Day | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">   
+  <title>Your Day | Discover</title>
 </head>
 
-<body>
+<!-- <body style="overflow: hidden;"> -->
+  <body>
   <div class="row">
     <div id="songs" class="box">
-      <div class="back">
+      <div class="front">
+        <h1>¿Qué <span>canción</span> sonaba por todas parte cuando naciste?</h1>
+        <!-- <button>Descubrir</button> -->
+      </div>
+        
+     <div class="back">
         <h3>La canción más escuchada el día que naciste fue...</h3>
         <h2 id="song-name"></h2>
-        <iframe
+        <img src="css/images/gray.jpg" />
+        <h4 id="album-name"></h4>
+        <!-- <iframe
           width="560"
           height="315"
           src="//www.youtube.com/embed/58-atNakMWw"
           frameborder="0"
           allowfullscreen
-        ></iframe>
-        <button onclick="showPopup('#music')" id="btn-song">Descubrir más</button>
+        ></iframe> -->
+        <button onclick="showPopup('#music')" id="btn-song">Saber más</button>
       </div>
     </div>
 
     <div id="movies" class="box">
+      <div class="front">
+        <h1>¿Para qué <span>película</span> hacían todos cola en el cine?</h1>
+        <!-- <button>Descubrir</button>       -->
+      </div>
       <div class="back">
         <h3>La película más vista el día que naciste fue...</h3>
         <h2 id="movie-name"></h2>
-        <iframe
+        <img src="css/images/gray.jpg" />
+        <!-- <h4 id="director-name"></h4> -->
+        <!-- <iframe
           width="560"
           height="315"
           src="//www.youtube.com/embed/58-atNakMWw"
           frameborder="0"
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
 
-        <button onclick="showPopup('#movie')">Descubrir más</button>
+        <button onclick="showPopup('#movie')">Saber más</button>
       </div>
     </div>
 
     <div id="books" class="box">
+      <div class="front">
+        <h1>¿Cuál era el <span>libro</span> que todos estaban ansiosos por leer?</h1>
+        <!-- <button>Descubrir</button>       -->
+      </div>
       <div class="back">
         <h3>El libro de ficción más leído el día que naciste fue...</h3>
         <h2 id="fiction-book-name"></h2>
-        <iframe
+        <img src="css/images/gray.jpg" />
+        <h4 id="writter-name"></h4>
+        <!-- <iframe
           width="560"
           height="315"
           src="//www.youtube.com/embed/58-atNakMWw"
           frameborder="0"
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
 
-        <button onclick="showPopup('#fiction-books')">Descubrir más</button>
+        <button onclick="showPopup('#fiction-books')">Saber más</button>
       </div>
     </div>
   </div>
 
   <div>
     <div class="full-screen hidden flex-container-center" id="music">
-      <h2>Let me music you about this thing!!</h2>
+      <h4>Let me music you about this thing!!</h4>
       <button onclick="closePopup('#music')">Close Popup!</button>
     </div>
     <div class="full-screen hidden flex-container-center" id="movie">
-      <h2>Let me movie you about this thing!!</h2>
+      <h4>Let me movie you about this thing!!</h4>
       <button onclick="closePopup('#movie')">Close Popup!</button>
     </div>
     <div class="full-screen hidden flex-container-center" id="fiction-books">
-      <h2>Let me book you about this thing!!</h2>
+      <h4>Let me book you about this thing!!</h4>
       <button onclick="closePopup('#fiction-books')">Close Popup!</button>
     </div>
   </div>

@@ -4,18 +4,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
     <title>Your Day | Home</title>
   </head>
 
-  <body>
-    <header class="home-header">
-      <div>
-        <nav>
-        </nav>
-        <div class = "title">
+  <body >
+    <header class="home-header smooth-scroll">
+      <nav>
+        <div class="nav-bar">
+          <div class="logo-text">
+            <a href="index.html"><h2>YD</h2></a>
+          </div>
+          <div class="menu-items">
+            <a href="index.html" target="_blank">Your Day </a>
+            <a href="discover.html" target="_blank">Descubrir</a>
+            <a href="faqs.html" target="_blank">Faqs</a> 
+            <a href="login.html" target="_blank">Log In</a>
+            <a href="signup.html" target="_blank">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+      <div class="title">
         <h1>YOUR DAY</h1>
-      </div>
       </div>
     </header>
 
@@ -23,8 +40,16 @@
       <div class="section-content">
         <h2>ABOUT YOUR DAY</h2>
         <form>
-          <input type="date" id="birth-date" name="birth-date" min="19/10/1940" max="03/06/2018">
-          <button type="submit" class="button" id="discover-button"><a href="discover.html?date=">Descubrir</a></button>
+          <input
+            type="date"
+            id="birth-date"
+            name="birth-date"
+            min="19/10/1940"
+            max="03/06/2018"
+          />
+          <button type="submit" class="button" id="discover-button">
+            <a href="discover.html?date=">Descubrir</a>
+          </button>
         </form>
       </div>
     </section>
