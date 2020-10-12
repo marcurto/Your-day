@@ -9,6 +9,7 @@ body {
 
 h1 {
   font-size: 2em;
+  font-family: "Permanent Marker", cursive;
 }
 
 h2 {
@@ -31,11 +32,6 @@ h6 {
   font-size: 0.67em;
 }
 
-header {
-  height: 100vh;
-  background-color: green;
-}
-
 section {
   /* background-color: yellow; */
   /* border: 1px solid black; */
@@ -46,13 +42,26 @@ footer {
   height: 15vh;
 }
 
+.home-header {
+  height: 100vh;
+  background-color: #ffc728;
+  color: white;
+}
 .section-content {
   height: 100vh;
 }
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  font-size: 5em;
+}
 
 #home-header {
-  background-image: url("images/jez-timms-_Ch_onWf38o-unsplash.jpg");
-  background-size: cover;
+  /* background-image: url("images/jez-timms-_Ch_onWf38o-unsplash.jpg");
+  background-size: cover; */
 }
 
 #last-section {
@@ -173,25 +182,20 @@ footer {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
 }
-
 .flex-container-center {
-  displaY: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
-
-.full-screen{
-  color: white
+.full-screen {
+  color: white;
 }
-
 .hidden {
-    display: none;
+  display: none;
 }
-
-
 #songs {
   background: #ffc728;
 }
@@ -226,65 +230,84 @@ footer {
 }
 
 /* Sign up page */
-.signup{
+.signup {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
- }
-.form-wrapper{
+}
+.form-wrapper {
   display: flex;
   flex-direction: column;
   width: 500px;
   height: 500px;
   border-radius: 3%;
-  border: 2px solid rgba(212, 34, 153, 0.555);
-  background: rgb(36,0,24);
-  background: linear-gradient(97deg, rgba(36,0,24,0.22936498818277307) 0%, rgba(255,40,96,1) 0%, rgba(255,0,137,0.40303445596988796) 100%);
+  background: red;
 }
-.form-wrapper > form{
+.form-wrapper > form {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 600px;
 }
 .signup form {
-  
 }
-.signup form input{
-
+.signup form input {
 }
 
 /* Log in page */
-.login{
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
- }
-.form-wrapper{
+}
+.form-wrapper {
   display: flex;
   flex-direction: column;
   width: 500px;
   height: 500px;
   border-radius: 3%;
-  border: 2px solid rgba(212, 34, 153, 0.555);
-  background: rgb(36,0,24);
-  background: linear-gradient(97deg, rgba(36,0,24,0.22936498818277307) 0%, rgba(255,40,96,1) 0%, rgba(255,0,137,0.40303445596988796) 100%);
+  background-color: red;
 }
-.form-wrapper > form{
+.form-wrapper > form {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 600px;
 }
 .login form {
-  
 }
-.login form input{
-
+.login form input {
 }
 
 /* FaQs page */
+
+.faqs-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-color: red;
+}
+.faqs {
+  display: flex;
+  width: 100%;
+}
+.questions {
+  width: 65%;
+}
+
+.faqs-img {
+  display: flex;
+  width: 35%;
+}
+.faqs-img img {
+  margin: 15px;
+}
+
+.faqs-footer {
+  background-color: rgb(75, 61, 61);
+}

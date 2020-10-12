@@ -1,7 +1,7 @@
 const baseURL = "https://best-songs2.herokuapp.com/";
 
 
-// const sng = document.getElementById('btn-song');
+// const sng = document.getElementById('btn-song'); ho usaré des
 
 async function getSongs() {
     // Get Songs [{}]
@@ -27,6 +27,17 @@ async function getFictionBooks() {
 
 }
 getFictionBooks();
+
+// async function getGeniusElements(){
+//     var CLIENTID = "zo3DOUN6FiuLgkV3dNHrgaj113LqaYweTJODBfdobdCEKHLopbYyhvitTefvrjRL";
+//     var CLIENTSECRET = "6ArCdcGqhCnH_ZzYCuYEfbA7XWpBtpXFMVverCl-_9Bq3-zhcoTRBpAnkA4fO4DiRGhkymiL7hJpIidUcYYOiA";
+//     var accessToken= "C3u6_zMj-ydh47rQTU5KJ4FcBP0G-VyFEtQRZdmNcLPncQieWm9jP6mpYTf6UJuN";
+//     var API = "https://api.genius.com/search";
+//     var APISong = "https://api.genius.com/songs/";
+//     var songID = "2471960";
+//     var maxSong= 2471960; 
+// }
+
 
 
 function generateHTMLsongs(data, date) {
