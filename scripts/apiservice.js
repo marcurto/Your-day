@@ -30,13 +30,25 @@ getFictionBooks();
 
 
 
-async function getGeniusElements(){
-    var CLIENTID = "zo3DOUN6FiuLgkV3dNHrgaj113LqaYweTJODBfdobdCEKHLopbYyhvitTefvrjRL";
-    var CLIENTSECRET = "6ArCdcGqhCnH_ZzYCuYEfbA7XWpBtpXFMVverCl-_9Bq3-zhcoTRBpAnkA4fO4DiRGhkymiL7hJpIidUcYYOiA";
-    var accessToken= "C3u6_zMj-ydh47rQTU5KJ4FcBP0G-VyFEtQRZdmNcLPncQieWm9jP6mpYTf6UJuN";
-    var API = "https://api.genius.com/search";
-    var APISong = "https://api.genius.com/songs/";
+async function getGeniusElements(title, artist){
+    const geniusAPI = "https://api.genius.com";
+    // Primer, coloquem el "search" que té un mètode get
+    const idSearch = {
+        access_token: 'aGbbOkBzMJvX6NUxCQ7DsauaD49ZAhJQvkI9X9kp7eVFiS3fXBkRKyLK_qUk5FTw',
+        q: title + ' ' + artist
+    }
+    const result = await fetch(geniusAPI + '/search?' + new URLSearchParams(idSearch));
+    const data = await result.json();
+    const id = data.response.hits[0].result.id
+
+    const songSearch ={
+        access_token: 'aGbbOkBzMJvX6NUxCQ7DsauaD49ZAhJQvkI9X9kp7eVFiS3fXBkRKyLK_qUk5FTw',
+    }
+    const response = await fetch(geniusAPI + '/songs/' + id + '?' + new URLSearchParams(idSearch))
+    const responsejson = await response.json();
+    return responsejson
 }
+
 
 
 
@@ -51,8 +63,8 @@ function generateHTMLsongs(data, date) {
     })
     document.getElementById('song-name').innerHTML = songDate[0].songTitle;
     document.getElementById('album-name').innerHTML = 'Cantante: ' + songDate[0].artist;
-
-    console.log(songDate)
+    
+    return songDate[0]; // Li apliquem return perquè és una funció síncrona de la qual en necessitem el resultat per cridar-lo a la funció asíncrona getGeniusElements.
 }
 
 function generateHTMLmovies(data, date) {
@@ -84,6 +96,12 @@ function generateHTMLfictionbooks(data, date) {
     console.log(fictionBookDate)
 }
 
+function generateHTMLgenius(selectedElement){
+    document.getElementById('prueva').innerHTML = selectedElement.response.song.title
+    const albumImage = `<img src='${selectedElement.response.song.song_art_image_url}'>`
+   document.getElementById('album-img').innerHTML = albumImage;
+}
+
 
 
 window.addEventListener('load', async (event) => {
@@ -94,7 +112,9 @@ window.addEventListener('load', async (event) => {
     // Selecciono el paràmetre "date" (en aquest moment afegim els parámetres a la URL a mà per provar si funciona; després ho generaré desde l'index)
     const date = params.get('date');
     const allsongs = await getSongs();
-    generateHTMLsongs(allsongs, date);
+    const currentSong = generateHTMLsongs(allsongs, date); // Guardem el return de la funció generateHTMLsongs
+    const responsejson = await getGeniusElements(currentSong.songTitle, currentSong.artist);
+    generateHTMLgenius(responsejson);
     const allmovies = await getMovies();
     generateHTMLmovies(allmovies, date);
     const allfictionbooks = await getFictionBooks();
