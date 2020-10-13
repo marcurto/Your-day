@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -68,17 +69,10 @@
           <div class="input-section-content">
             <div id="input-section-content-form">
               <h3>Introduce tu fecha de nacimiento:</h3>
-              <form>
-                <input
-                  type="date"
-                  id="birth-date"
-                  name="birth-date"
-                  min="1940-10-19"
-                  max="2018-06-03"
-                  pattern="\a{4}-\m{2}-\d{2}"
-                /><br />
-                <button type="submit" class="button" id="discover-button">
-                  <a href="discover.html?date="><span>Descubrir</span></a>
+              <form action="/discover.html">
+                <input type="date" id="birth-date" name="date" min="1940-10-19" max="2018-06-03"/><br />
+                <button onclick="loadDate()" type="submit" class="button discover-button" id="birth-button">
+                  <span>Descubrir</span>
                 </button>
               </form>
             </div>
@@ -125,6 +119,18 @@
       <h2>FOOTER</h2>
     </footer>
 
+
+
+    <script>
+      function loadDate(){
+        console.log('jafh')
+        const myDate = document.getElementById('birth-date');
+        console.log(myDate.value)
+        window.location = '/discover.html?date=' + myDate.value; 
+      }
+    </script>
+
     <script src="scripts/apiservice.js"></script>
   </body>
+  
 </html>

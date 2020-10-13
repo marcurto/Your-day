@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,6 +25,7 @@
     <title>Your Day | Log In</title>
   </head>
   <body>
+    <div class="login-page">
     <header class="login-header">
       <nav>
         <div class="nav-bar">
@@ -39,21 +41,27 @@
           </div>
         </div>
       </nav>
-      </header>
+    </header>
     <section>
-      <div class="login">
-        <div class="form-wrapper">
-          <form class="login form" action="">
-            <h2>Log In</h2>
-            <input type="email" id="email" placeholder="Email" />
-            <input type="password" id="password" placeholder="****" />
-            <button type="submit" class="button" id="login-button">Login</button>
-              Log In
-            </button>
-          </form>
+      <div class="login-div">
+        <div class="login-img">
+          <img src="css/images/3506015.jpg" />
+        </div>
+        <div class="login-content">
+          <div class="form-wrapper">
+            <form class="login" action="">
+              <h2>INICIA SESIÓN</h2>
+              <input type="email" id="email" placeholder="Email" />
+              <input type="password" id="password" placeholder="****" />
+              <button type="submit" class="button">
+                <a href="index.html">Login</a>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
+  </div>
 
     <script src="scripts/login.js"></script>
     <script src="scripts/database.js"></script>
