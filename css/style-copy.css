@@ -1,0 +1,196 @@
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(27, 27, 29)
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.67em;
+}
+
+
+nav{
+  position: fixed;
+}
+nav a{
+  font-weight: 700;
+  font-size: 0.7em;
+  letter-spacing: 3px;
+}
+.elements-container {
+  background-color: red;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin: 20px 90px;
+}
+.first-container-horit{
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  width: 100%;
+}
+.second-container-horit{
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  width: 100%;
+}
+.third-container-horit{
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  width: 100%;
+}
+.foto-container-vert{
+  background-color:  #282828;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.foto-container-vert h2{
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  padding: 10px;
+  border: 3px white solid;
+  letter-spacing: 5px;
+}
+
+.text-container-vert{
+  background-color: white;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 70px;
+}
+.text-container-vert h4{
+  font-family:  'Montserrat', sans-serif;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+}
+.text-container-vert p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#song-container-vert{
+  background-image: url('/css/images/bogomil-mihaylov-ekHSHvgr27k-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+#movie-container-vert{
+  background-image: url('/css/images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+#book-container-vert{
+  background-image: url('/css/images/taylor-D9_QOTmbFAg-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+.saber-mas-btn{
+  border: none;
+  letter-spacing: 3px;
+  background-color: transparent;
+  padding: 10px 30px;
+  transition: 0.2s
+}
+.saber-mas-btn:hover{
+  border: 3px #232323 solid;
+  letter-spacing: 3px;
+  background-color: transparent;
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: #232323;
+  color:white
+}
+
+.close-pop-btn{
+  border: none;
+  letter-spacing: 3px;
+  background-color: #232323;
+  padding: 10px 30px;
+  transition: 0.2s;
+  color:white;
+}
+.close-pop-btn:hover{
+  border: 3px #232323 solid;
+  letter-spacing: 3px;
+  background-color: transparent;
+  padding: 5px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  color:#232323
+}
+
+footer{
+  background-color: #232323;
+  color: white;
+  height: 200px;
+}
+
+/* Pop up */
+.full-screen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black
+}
+.hidden {
+  display: none;
+}
+
+
+
+/* 
+.elements-container{
+  display: flex;
+  flex-direction: column;
+}
+.first-container-horit{
+  display: flex;
+  flex-direction: row;
+} */

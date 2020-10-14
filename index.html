@@ -69,7 +69,7 @@
           <div class="input-section-content">
             <div id="input-section-content-form">
               <h3>Introduce tu fecha de nacimiento:</h3>
-              <form action="/discover.html">
+              <form action="/discovercopy.html">
                 <input type="date" id="birth-date" name="date" min="1940-10-19" max="2018-06-03"/><br />
                 <button onclick="loadDate()" type="submit" class="button discover-button" id="birth-button">
                   <span>Descubrir</span>
@@ -126,7 +126,7 @@
         console.log('jafh')
         const myDate = document.getElementById('birth-date');
         console.log(myDate.value)
-        window.location = '/discover.html?date=' + myDate.value; 
+        window.location = '/discovercopy.html?date=' + myDate.value; 
       }
     </script>
 

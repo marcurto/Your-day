@@ -113,6 +113,7 @@ async function getIMDBElements(title){
 
 
 function generateHTMLsongs(data, date) {
+    console.log(date)
 
     const birth = date // Serà la data que haurem introduit a la página index.html
     let songDate = data.filter((song) => {
@@ -121,8 +122,8 @@ function generateHTMLsongs(data, date) {
         }
         return false;
     })
-    document.getElementById('song-name').innerHTML = songDate[0].songTitle;
-    document.getElementById('album-name').innerHTML = 'Cantante: ' + songDate[0].artist;
+    // document.getElementById('song-name').innerHTML = songDate[0].songTitle;
+    // document.getElementById('album-name').innerHTML = 'Cantante: ' + songDate[0].artist;
     document.getElementById('days-number-one').innerHTML = 'Desde el día ' + songDate[0].startDate + ' hasta el día ' + songDate[0].endDate
     
 
@@ -138,7 +139,7 @@ function generateHTMLmovies(data, date) {
         }
         return false;
     })
-    document.getElementById('movie-name').innerHTML = movieDate[0].movieTitle;
+    // document.getElementById('movie-name').innerHTML = movieDate[0].movieTitle;
 
     return movieDate[0];
 }
@@ -153,8 +154,8 @@ function generateHTMLfictionbooks(data, date) {
         }
         return false;
     })
-    document.getElementById('fiction-book-name').innerHTML = fictionBookDate[0].title
-    document.getElementById('writter-name').innerHTML = fictionBookDate[0].author
+    // document.getElementById('fiction-book-name').innerHTML = fictionBookDate[0].title
+    // document.getElementById('writter-name').innerHTML = fictionBookDate[0].author
 
     console.log(fictionBookDate)
 }
@@ -168,8 +169,8 @@ function generateHTMLnofictionbooks(data, date) {
         }
         return false;
     })
-    document.getElementById('no-fiction-book-name').innerHTML = noFictionBookDate[0].title
-    document.getElementById('writter-name-no-fiction').innerHTML = noFictionBookDate[0].author
+    // document.getElementById('no-fiction-book-name').innerHTML = noFictionBookDate[0].title
+    // document.getElementById('writter-name-no-fiction').innerHTML = noFictionBookDate[0].author
 
     console.log(noFictionBookDate)
 }
@@ -181,7 +182,7 @@ function generateHTMLgenius(selectedElement){
     document.getElementById('release-date').innerHTML = selectedElement.response.song.release_date
     document.getElementById('song-tag').innerHTML = selectedElement.response.song.description.dom.children[0].children[0] + selectedElement.response.song.description.dom.children[0].children[0].children
     const albumImage = `<img src='${selectedElement.response.song.song_art_image_url}'>`
-    document.getElementById('album-img').innerHTML = albumImage;
+    // document.getElementById('album-img').innerHTML = albumImage;
     const artistImage = `<img src='${selectedElement.response.song.primary_artist.image_url}'>`
     document.getElementById('artist-image').innerHTML = artistImage;
     const cdImage = `<img src='${selectedElement.response.song.album.cover_art_url}'>`
@@ -189,7 +190,21 @@ function generateHTMLgenius(selectedElement){
 }
 
 function generateHTMLimdb(selectedMovie){
-    document.getElementById('movie-name-imdb').innerHTML = selectedMovie.response
+    document.getElementById('movie-name-imdb').innerHTML = selectedMovie.Title;
+    // const movieImage = `<img src='${selectedMovie.Poster}'>`
+    // document.getElementById('movie-img').innerHTML = movieImage;
+    document.getElementById('movie-year-imdb').innerHTML = selectedMovie.Year;
+    document.getElementById('movie-released-imdb').innerHTML = selectedMovie.Released;
+    document.getElementById('movie-runtime-imdb').innerHTML = selectedMovie.Runtime;
+    document.getElementById('movie-genre-imdb').innerHTML = selectedMovie.Genre;
+    document.getElementById('movie-director-imdb').innerHTML = selectedMovie.Director;
+    document.getElementById('movie-actors-imdb').innerHTML = selectedMovie.Actors;
+    document.getElementById('movie-plot-imdb').innerHTML = selectedMovie.Plot;
+    document.getElementById('movie-country-imdb').innerHTML = selectedMovie.Country;
+    document.getElementById('movie-rate-1-imdb').innerHTML = selectedMovie.Ratings[0].Source + ': ' + selectedMovie.Ratings[0].Value;
+    document.getElementById('movie-rate-2-imdb').innerHTML = selectedMovie.Ratings[1].Source + ': ' + selectedMovie.Ratings[1].Value;
+    document.getElementById('movie-rate-3-imdb').innerHTML = selectedMovie.Ratings[2].Source + ': ' + selectedMovie.Ratings[2].Value;
+    document.getElementById('movie-rate-4-imdb').innerHTML = selectedMovie.imdbRating;
 }
 
 
@@ -212,7 +227,7 @@ window.addEventListener('load', async (event) => {
     const selectedMovie = generateHTMLmovies(allmovies, date);
 
     const responsejsons = await getIMDBElements(selectedMovie.movieTitle);
-    generateHTMLimdb(responsejson)
+    generateHTMLimdb(responsejsons)
 
     const allfictionbooks = await getFictionBooks();
     generateHTMLfictionbooks(allfictionbooks, date);
