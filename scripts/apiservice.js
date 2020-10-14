@@ -37,8 +37,6 @@ async function getnoFictionBooks() {
 }
 getnoFictionBooks();
 
-
-
 async function getGeniusElements(title, artist){
     const geniusAPI = "https://api.genius.com";
     // Primer, coloquem el "search" que té un mètode get
@@ -82,8 +80,34 @@ async function getIMDBElements(title){
 	}
 })
 
-    return await response.json();
+    const responsejson = await response.json();
+    return responsejson
 }
+
+// async function getGoogleBooks(title){
+//     const googleAPI = "https://www.googleapis.com/books/v1/volumes?q=";
+
+//     const idSearch ={
+//         access_token: 'AIzaSyBSnVlMs85v4gfFb1a7qqIy38-ghssT2WI',
+//         //no se buscar-ho, retraso
+//     }
+
+//     const result = await fetch(googleAPI + '' + new URLSearchParams(idSearch));
+//     const data = await result.json();
+//     const id=""
+
+//     const bookSearch ={
+//         access_token: 'AIzaSyBSnVlMs85v4gfFb1a7qqIy38-ghssT2WI',
+//     }
+
+
+    
+
+// }
+
+
+
+
 
 
 
@@ -116,13 +140,13 @@ function generateHTMLmovies(data, date) {
     })
     document.getElementById('movie-name').innerHTML = movieDate[0].movieTitle;
 
-    console.log(movieDate)
     return movieDate[0];
 }
 
 function generateHTMLfictionbooks(data, date) {
     
     const birth = date // Serà la data que haurem introduit a la página index.html
+    console.log(birth)
     let fictionBookDate = data.filter((fictionbook) => {
         if (birth >= fictionbook.startDate && birth <= fictionbook.endDate) {
             return true;
@@ -164,6 +188,9 @@ function generateHTMLgenius(selectedElement){
     document.getElementById('cd-image').innerHTML = cdImage;
 }
 
+function generateHTMLimdb(selectedMovie){
+    document.getElementById('movie-name-imdb').innerHTML = selectedMovie.response
+}
 
 
 window.addEventListener('load', async (event) => {
@@ -173,16 +200,24 @@ window.addEventListener('load', async (event) => {
     const params = new URLSearchParams(querystring);
     // Selecciono el paràmetre "date" (en aquest moment afegim els parámetres a la URL a mà per provar si funciona; després ho generaré desde l'index)
     const date = params.get('date');
+
+
     const allsongs = await getSongs();
     const currentSong = generateHTMLsongs(allsongs, date); // Guardem el return de la funció generateHTMLsongs
+
     const responsejson = await getGeniusElements(currentSong.songTitle, currentSong.artist);
     generateHTMLgenius(responsejson);
+
     const allmovies = await getMovies();
     const selectedMovie = generateHTMLmovies(allmovies, date);
-    const responsejsonmovies = await getIMDBElements(selectedMovie.movieTitle)
-    console.log(responsejsonmovies);
+
+    const responsejsons = await getIMDBElements(selectedMovie.movieTitle);
+    generateHTMLimdb(responsejson)
+
     const allfictionbooks = await getFictionBooks();
     generateHTMLfictionbooks(allfictionbooks, date);
+    
+
     const allnofictionbooks = await getnoFictionBooks();
     generateHTMLnofictionbooks(allnofictionbooks, date);
 });
