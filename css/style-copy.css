@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
@@ -38,28 +42,24 @@ nav a{
   letter-spacing: 3px;
 }
 .elements-container {
-  background-color: red;
   display: flex;
   height: 100%;
   flex-direction: column;
-  margin: 20px 90px;
+  margin: 0px 90px;
 }
 .first-container-horit{
-  background-color: blue;
   display: flex;
   flex-direction: row;
   height: 400px;
   width: 100%;
 }
 .second-container-horit{
-  background-color: blue;
   display: flex;
   flex-direction: row;
   height: 400px;
   width: 100%;
 }
 .third-container-horit{
-  background-color: blue;
   display: flex;
   flex-direction: row;
   height: 400px;
@@ -82,7 +82,7 @@ nav a{
 }
 
 .text-container-vert{
-  background-color: white;
+  background-color: #f8f9f9;
   width: 50%;
   height: 400px;
   display: flex;
@@ -177,20 +177,224 @@ footer{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: black
+  color: black;
 }
 .hidden {
   display: none;
 }
-
-
-
-/* 
-.elements-container{
+.music-elements{
+  display:flex;
+  width: 100%;
+  
+}
+.music-img-div{
+  height: 100vh;
+  width: 40%;
+  background-image: url('/css/images/alasdair-elmes-xez-RVM6wz0-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.music-text-div{
+  background-color: #303133;
+  width: 60%;
+  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 50px;
 }
-.first-container-horit{
+
+.music-text-div > h2{
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.music-text-div > h3{
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 30px;
+}
+.music-text-div img{
+  width: 180px;
+  margin-left: 30px;
+  
+}
+.music-text-div button{
+  margin-top: 30px;
+}
+.album-dades{
   display: flex;
-  flex-direction: row;
-} */
+  margin-top: 40px;
+}
+.album-dades-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.album-dades-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+.album-dades-text > h6{
+  font-size: 1.1em;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.album-dades-text > h5{
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.movie-elements{
+  display:flex;
+  width: 100%;
+  
+}
+.movie-img-div{
+  height: 100vh;
+  width: 40%;
+  background-image: url('/css/images/denise-jans-9lTUAlNB87M-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.movie-text-div{
+  background-color: #16141b;
+  width: 60%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 50px;
+}
+.movie-text-div h2{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.movie-info-poster{
+  display: flex;
+  margin-top: 30px;
+}
+.movie-info{
+  margin-left: 30px;
+}
+.movie-info > h2{
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+.movie-info > h5{
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+.plot{
+  margin-left: 30px;
+  margin-top: 30px
+}
+.plot > h2{
+  font-size: 1.1em;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 10px;
+  font-weight: 200;
+}
+.plot > h5{
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+.rates{
+  display: flex;
+  margin-top:20px;
+  margin-bottom: 30px;
+}
+.rate-name h5{
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.rates-type{
+  margin-right: 30px;
+}
+.rates-type h2{
+  font-size: 1em;
+}
+.movie-poster{
+  margin-left: 20px;
+}
+#movie-img img{
+  width: 250px;
+}
+
+/* Faqs Page */
+.faqs-header {
+  height: 300px;
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.faqs-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  letter-spacing: 5px;
+  font-size: 2em;
+  padding-left: 30px;
+  border-bottom: 1px solid white;
+}
+.title-faqs{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+}
+.faqs {
+  display: flex;
+  width: 100%;
+}
+.questions {
+  width: 60%;
+}
+
+.faqs-img {
+  display: flex;
+  width: 40%;
+}
+.faqs-img img {
+  margin: 25px;
+}
+.faqs-content{
+  text-align: start;
+  margin: 40px 40px
+}
+.faqs-content h2{
+  text-align: start;
+  margin: 0px 40px;
+  color: rgb(45, 45, 48)
+}
+.faqs-content p{
+  text-align: start;
+  margin-top: 15px;
+  color: rgb(45, 45, 48);
+  font-family: 'Open Sans', sans-serif;
+}
+.question-items{
+  margin: 40px
+}
+.question-items h4{
+  border-bottom: #343a40 1px solid;
+  color: rgb(45, 45, 48);
+  letter-spacing: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3em;
+}

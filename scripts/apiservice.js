@@ -124,7 +124,7 @@ function generateHTMLsongs(data, date) {
     })
     // document.getElementById('song-name').innerHTML = songDate[0].songTitle;
     // document.getElementById('album-name').innerHTML = 'Cantante: ' + songDate[0].artist;
-    document.getElementById('days-number-one').innerHTML = 'Desde el día ' + songDate[0].startDate + ' hasta el día ' + songDate[0].endDate
+    document.getElementById('days-number-one').innerHTML = 'from ' + songDate[0].startDate + ' to ' + songDate[0].endDate
     
 
     return songDate[0]; // Li apliquem return perquè és una funció síncrona de la qual en necessitem el resultat per cridar-lo a la funció asíncrona getGeniusElements.
@@ -180,19 +180,19 @@ function generateHTMLgenius(selectedElement){
     document.getElementById('artist-name-genius').innerHTML = selectedElement.response.song.primary_artist.name
     document.getElementById('cd-name').innerHTML = selectedElement.response.song.album.name
     document.getElementById('release-date').innerHTML = selectedElement.response.song.release_date
-    document.getElementById('song-tag').innerHTML = selectedElement.response.song.description.dom.children[0].children[0] + selectedElement.response.song.description.dom.children[0].children[0].children
+    // document.getElementById('song-tag').innerHTML = selectedElement.response.song.description.dom.children[0].children[0] + selectedElement.response.song.description.dom.children[0].children[0].children
     const albumImage = `<img src='${selectedElement.response.song.song_art_image_url}'>`
     // document.getElementById('album-img').innerHTML = albumImage;
-    const artistImage = `<img src='${selectedElement.response.song.primary_artist.image_url}'>`
-    document.getElementById('artist-image').innerHTML = artistImage;
+    // const artistImage = `<img src='${selectedElement.response.song.primary_artist.image_url}'>`
+    // document.getElementById('artist-image').innerHTML = artistImage;
     const cdImage = `<img src='${selectedElement.response.song.album.cover_art_url}'>`
     document.getElementById('cd-image').innerHTML = cdImage;
 }
 
 function generateHTMLimdb(selectedMovie){
     document.getElementById('movie-name-imdb').innerHTML = selectedMovie.Title;
-    // const movieImage = `<img src='${selectedMovie.Poster}'>`
-    // document.getElementById('movie-img').innerHTML = movieImage;
+    const movieImage = `<img src='${selectedMovie.Poster}'>`
+    document.getElementById('movie-img').innerHTML = movieImage;
     document.getElementById('movie-year-imdb').innerHTML = selectedMovie.Year;
     document.getElementById('movie-released-imdb').innerHTML = selectedMovie.Released;
     document.getElementById('movie-runtime-imdb').innerHTML = selectedMovie.Runtime;
@@ -201,9 +201,9 @@ function generateHTMLimdb(selectedMovie){
     document.getElementById('movie-actors-imdb').innerHTML = selectedMovie.Actors;
     document.getElementById('movie-plot-imdb').innerHTML = selectedMovie.Plot;
     document.getElementById('movie-country-imdb').innerHTML = selectedMovie.Country;
-    document.getElementById('movie-rate-1-imdb').innerHTML = selectedMovie.Ratings[0].Source + ': ' + selectedMovie.Ratings[0].Value;
-    document.getElementById('movie-rate-2-imdb').innerHTML = selectedMovie.Ratings[1].Source + ': ' + selectedMovie.Ratings[1].Value;
-    document.getElementById('movie-rate-3-imdb').innerHTML = selectedMovie.Ratings[2].Source + ': ' + selectedMovie.Ratings[2].Value;
+    document.getElementById('movie-rate-1-imdb').innerHTML = selectedMovie.Ratings[0].Value;
+    document.getElementById('movie-rate-2-imdb').innerHTML = selectedMovie.Ratings[1].Value;
+    document.getElementById('movie-rate-3-imdb').innerHTML = selectedMovie.Ratings[2].Value;
     document.getElementById('movie-rate-4-imdb').innerHTML = selectedMovie.imdbRating;
 }
 
