@@ -398,3 +398,99 @@ footer{
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3em;
 }
+
+
+/* LOG-IN */
+.login-div{
+  background-color: #343a40;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mini-login-div{
+  display: flex;
+  height: 600px;
+  width: 1000px;
+}
+.login-img{
+  background-color: #343a40;
+  width: 400px;
+  border-right: 1px white solid;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.login-img h1{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 4em;
+}
+.login{
+  padding: 30px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login h2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: 2em;
+  padding-left: 30px;
+  border-bottom: 1px solid white;
+  align-self: flex-start;
+  margin-bottom: 60px;
+  color: white
+}
+.login input{
+  margin: 20px 10px;
+  height: 50px;
+  width: 380px;
+  padding: 20px;
+  background-color: transparent;
+  border: solid 1px white
+}
+form input, .placeholder {
+  color: white;
+}
+.login input::selection{
+  margin: 10px;
+  height: 50px;
+  width: 380px;
+  padding: 20px;
+  background-color: transparent;
+  border: solid 2px white
+}
+form input, .placeholder {
+  color: white
+}
+.login button{
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  padding: 10px 20px;
+  border: 1.5px white solid;
+  letter-spacing: 5px;
+  margin-top: 20px;
+}
+.button a{
+  text-decoration: none;
+}
+.login button:hover{
+  font-family: 'Montserrat', sans-serif;
+  color:black;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px white solid;
+  letter-spacing: 5px;
+  margin-top: 20px;
+}
+.button a:hover{
+  text-decoration: none;
+}
