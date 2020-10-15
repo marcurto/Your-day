@@ -85,7 +85,7 @@
              <h3>Introduce tu fecha de nacimiento:</h3>
               <form action="discover.html">
                 <input type="date" id="birth-date" name="date" min="1940-10-19" max="2018-06-03"/><br />
-                <button onclick="loadDate()" type="submit" class="button saber-mas-btn" id="birth-button">
+                <button type="submit" class="button saber-mas-btn" id="birth-button">
                   <span>Descubrir</span>
                 </button>
              </form>
@@ -193,12 +193,7 @@
 
 
     <script>
-      function loadDate(){
-        console.log('jafh')
-        const myDate = document.getElementById('birth-date');
-        console.log(myDate.value)
-        window.location = '/ProyectoIronHack/discover.html?date=' + myDate.value; 
-      }
+
     </script>
 
     <script src="scripts/apiservice.js"></script>
