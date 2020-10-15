@@ -84,26 +84,28 @@ async function getIMDBElements(title){
     return responsejson
 }
 
-// async function getGoogleBooks(title){
-//     const googleAPI = "https://www.googleapis.com/books/v1/volumes?q=";
+async function getGoogleBooks(title){
+    const googleAPI = "https://www.googleapis.com/books/v1/volumes";
 
-//     const idSearch ={
-//         access_token: 'AIzaSyBSnVlMs85v4gfFb1a7qqIy38-ghssT2WI',
-//         //no se buscar-ho, retraso
-//     }
+    const idSearch ={
+        key: 'AIzaSyBSnVlMs85v4gfFb1a7qqIy38-ghssT2WI',
+        q: title
+        //no se buscar-ho, retraso
+    }
 
-//     const result = await fetch(googleAPI + '' + new URLSearchParams(idSearch));
-//     const data = await result.json();
-//     const id=""
+    const result = await fetch(googleAPI + '?' + new URLSearchParams(idSearch));
+    const data = await result.json();
+    const link =data.items[0].selfLink;
 
-//     const bookSearch ={
-//         access_token: 'AIzaSyBSnVlMs85v4gfFb1a7qqIy38-ghssT2WI',
-//     }
-
-
+    const idSearch2 ={
+        key: 'AIzaSyBSnVlMs85v4gfFb1a7qqIy38-ghssT2WI',
+        //no se buscar-ho, retraso
     
-
-// }
+    }
+    const result2 = await fetch(link + '?' + new URLSearchParams(idSearch2));
+    const d = await result2.json();
+    return d;
+}
 
 
 
@@ -124,6 +126,8 @@ function generateHTMLsongs(data, date) {
     })
     // document.getElementById('song-name').innerHTML = songDate[0].songTitle;
     // document.getElementById('album-name').innerHTML = 'Cantante: ' + songDate[0].artist;
+    const video = `<iframe width="600" height="400" src="https://www.youtube.com/embed/${songDate[0].youtubeId}"></iframe>`;
+    document.getElementById('song-video').innerHTML = video;
     document.getElementById('days-number-one').innerHTML = 'from ' + songDate[0].startDate + ' to ' + songDate[0].endDate
     
 
@@ -157,7 +161,7 @@ function generateHTMLfictionbooks(data, date) {
     // document.getElementById('fiction-book-name').innerHTML = fictionBookDate[0].title
     // document.getElementById('writter-name').innerHTML = fictionBookDate[0].author
 
-    console.log(fictionBookDate)
+    return fictionBookDate[0]
 }
 
 function generateHTMLnofictionbooks(data, date) {
@@ -172,20 +176,20 @@ function generateHTMLnofictionbooks(data, date) {
     // document.getElementById('no-fiction-book-name').innerHTML = noFictionBookDate[0].title
     // document.getElementById('writter-name-no-fiction').innerHTML = noFictionBookDate[0].author
 
-    console.log(noFictionBookDate)
+    return noFictionBookDate[0]
 }
 
 function generateHTMLgenius(selectedElement){
-    document.getElementById('song-name-genius').innerHTML = selectedElement.response.song.title
-    document.getElementById('artist-name-genius').innerHTML = selectedElement.response.song.primary_artist.name
-    document.getElementById('cd-name').innerHTML = selectedElement.response.song.album.name
-    document.getElementById('release-date').innerHTML = selectedElement.response.song.release_date
+    document.getElementById('song-name-genius').innerHTML = selectedElement.response.song.title.toUpperCase();
+    document.getElementById('artist-name-genius').innerHTML = selectedElement.response.song.primary_artist.name;
+    document.getElementById('cd-name').innerHTML = selectedElement.response.song.album.name;
+    document.getElementById('release-date').innerHTML = selectedElement.response.song.release_date;
     // document.getElementById('song-tag').innerHTML = selectedElement.response.song.description.dom.children[0].children[0] + selectedElement.response.song.description.dom.children[0].children[0].children
-    const albumImage = `<img src='${selectedElement.response.song.song_art_image_url}'>`
+    const albumImage = `<img src='${selectedElement.response.song.song_art_image_url}'>`;
     // document.getElementById('album-img').innerHTML = albumImage;
     // const artistImage = `<img src='${selectedElement.response.song.primary_artist.image_url}'>`
     // document.getElementById('artist-image').innerHTML = artistImage;
-    const cdImage = `<img src='${selectedElement.response.song.album.cover_art_url}'>`
+    const cdImage = `<img src='${selectedElement.response.song.album.cover_art_url}'>`;
     document.getElementById('cd-image').innerHTML = cdImage;
 }
 
@@ -229,11 +233,15 @@ window.addEventListener('load', async (event) => {
     generateHTMLimdb(responsejsons)
 
     const allfictionbooks = await getFictionBooks();
-    generateHTMLfictionbooks(allfictionbooks, date);
+    const book =generateHTMLfictionbooks(allfictionbooks, date);
+    const detailBook = await getGoogleBooks(book.title);
     
 
     const allnofictionbooks = await getnoFictionBooks();
-    generateHTMLnofictionbooks(allnofictionbooks, date);
+    const book2 = generateHTMLnofictionbooks(allnofictionbooks, date);
+    const detailBook2 = await getGoogleBooks(book2.title);
+    console.log(detailBook2)
+
 });
 
 

@@ -99,8 +99,8 @@
             most accessible and wisest of counselors, and the most patient of
             teachers. <br>Charles W. Eliot
           </p>
-          <button onclick="showPopup('#fiction-books')" class="saber-mas-btn">
-            LEARN MORE
+          <button class="saber-mas-btn-coming">
+            COMING SOON...
           </button>
         </div>
       </div>
@@ -117,17 +117,11 @@
 
           </div>
           <div class="music-text-div">
-            <h3>THE MOST PROMINENT SONG WAS...</h3>
+            <h3>The most important song was...</h3>
             <h2 id="song-name-genius"></h2>
             <h3 id="artist-name-genius"></h3>
-            <div class="song-video">
-              <iframe
-              width="550"
-              height="320"
-              src=""
-              frameborder="0"
-              allowfullscreen
-            ></iframe>            
+            <div id="song-video">
+            
           </div>
             <!-- <div id="artist-image" ></div> -->
             <div class="album-dades">
@@ -168,7 +162,7 @@
 
           <div class="movie-text-div">
             <div>
-            <h3>THE MOST PROMINENT MOVIE WAS...</h3>
+            <h3>THE MOST IMPORTANT MOVIE WAS...</h3>
             <h2 id="movie-name-imdb"></h2>
           </div>
             <div class="movie-info-poster">
@@ -178,6 +172,7 @@
               </div>
 
               <div class="movie-info">
+                <div class="movie-info-left">
                 <h5>YEAR:</h5>
                 <h2 id="movie-year-imdb"></h2>
                 <h5>DATE RELEASED:</h5>
@@ -186,12 +181,15 @@
                 <h2 id="movie-runtime-imdb"></h2>
                 <h5>GENRE:</h5>
                 <h2 id="movie-genre-imdb"></h2>
+              </div>
+              <div class="movie-info-right">
                 <h5>DIRECTOR:</h5>
                 <h2 id="movie-director-imdb"></h2>
                 <h5>ACTORS:</h5>
                 <h2 id="movie-actors-imdb"></h2>
                 <h5>COUNTRY:</h5>
                 <h2 id="movie-country-imdb"></h2>
+              </div>
                
             </div>
           </div>
@@ -225,7 +223,7 @@
                 <h2 id="movie-rate-4-imdb"></h2>
               </div>
             </div>
-            <button onclick="closePopup('#movie')" class="close-pop-btn">
+            <button onclick="closePopup('#movie')" class="close-pop-btn-movies">
               GO BACK
             </button>
           </div>
@@ -262,7 +260,32 @@
 
     <!--Footer-->
     <footer>
-      <h1>FOOTER</h1>
+      <div class="footer-flex">
+      <div class="footer-title">
+        <h2>YOUR DAY</h2>
+      </div>
+      <div class="footer-list">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="discover.html">Discover</a>
+          </li>
+          <li>
+            <a href="faqs.html">Faqs</a>
+          </li>
+          <li>
+            <a href="login.html">Log In</a>
+          </li>
+          <li>
+            <a href="signup.html">Sign Up</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+      
     </footer>
 
     <script src="scripts/apiservice.js"></script>

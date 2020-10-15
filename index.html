@@ -13,6 +13,11 @@
   />
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"> 
+  <script
+      src="https://kit.fontawesome.com/73cec3d1ec.js"
+      crossorigin="anonymous"
+    ></script>
+
   <title>Your Day | Home</title>
 </head>
 
@@ -52,9 +57,10 @@
         </ul>
       </div>
     </nav>
+    <main>
     <header class="home-header">
       <div class="title">
-        <h1>YOUR DAY</h1>
+        <h1 class="typewriter">YOUR <span class='typewriter-text' data-text='[ "DAY ", "SONG ", "MOVIE ", "BOOK" ]'></span></h1>
       </div>
     </header>
 
@@ -86,6 +92,7 @@
           </div>
         </div>
     </section>
+  </main>
 
     <section class="discover-section-two">
       <div class="items-description-text">
@@ -106,25 +113,36 @@
       <div class="items-content">
         <div class="items-description">
             <div class="items-icon">
+              <i class="fa fa-play-circle-o" aria-hidden="true"></i>
             </div>
             <div class="description-icon">
-              <h2>CURIOSIDADES</h2>
+              <h4>THE SONG</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
             </div>
         </div>
 
         <div class="items-description">
           <div class="items-icon">
+            <i class="fa fa-film" aria-hidden="true"></i>
           </div>
           <div class="description-icon">
-            <h2>CURIOSIDADES</h2>
+            <h4>THE MOVIE</h4>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
           </div>
         </div>
 
         <div class="items-description">
           <div class="items-icon">
+            <i class="fa fa-bookmark-o" aria-hidden="true"></i>
           </div>
           <div class="description-icon">
-            <h2>CURIOSIDADES</h2>
+            <h4>THE BOOK</h4>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
           </div>
        </div>
       </div>  
@@ -139,39 +157,37 @@
         </div>
       </div>
 
-      <div class="items-content">
-        <div class="items-description">
-          <div class="items-icon">
-            <h1>fjg</h1>
-          </div>
-          <div class="description-icon">
-
-          </div>
-        </div>
-        <div class="items-description">
-          <div class="items-icon">
-            <h1>fjg</h1>
-
-          </div>
-          <div class="description-icon">
-
-          </div>
-        </div>
-        <div class="items-description">
-          <div class="items-icon">
-            <h1>fjg</h1>
-
-          </div>
-          <div class="description-icon">
-
-          </div>
-        </div>
-      </div>
+      
 
     </section>
 
     <footer>
-      <h2>FOOTER</h2>
+      <div class="footer-flex">
+        <div class="footer-title">
+          <h2>YOUR DAY</h2>
+        </div>
+        <div class="footer-list">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="discover.html">Discover</a>
+            </li>
+            <li>
+              <a href="faqs.html">Faqs</a>
+            </li>
+            <li>
+              <a href="login.html">Log In</a>
+            </li>
+            <li>
+              <a href="signup.html">Sign Up</a>
+            </li>
+          </ul>
+
+        </div>
+    </div>
+      
     </footer>
 
 
@@ -203,6 +219,51 @@
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"
 ></script>
+<script>
+  $(document).ready(function() {
+  
+  typing( 0, $('.typewriter-text').data('text') );
+
+  function typing( index, text ) {
+    
+    var textIndex = 1;
+
+    var tmp = setInterval(function() {
+      if ( textIndex < text[ index ].length + 1 ) {
+				$('.typewriter-text').text( text[ index ].substr( 0, textIndex ) );
+				textIndex++;
+			} else {
+        setTimeout(function() { deleting( index, text ) }, 2000);
+        clearInterval(tmp);
+      }
+
+		}, 150);
+
+	}
+
+	function deleting( index, text ) {
+
+    var textIndex = text[ index ].length;
+
+    var tmp = setInterval(function() {
+
+      if ( textIndex + 1 > 0 ) {
+        $('.typewriter-text').text( text[ index ].substr( 0, textIndex ) );
+        textIndex--;
+      } else {
+        index++;
+        if ( index == text.length ) { index = 0; }
+        typing( index, text );
+        clearInterval(tmp);
+      }
+
+		}, 150)
+
+  }
+
+});
+
+</script>
   </body>
   
 </html>
