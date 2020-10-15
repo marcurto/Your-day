@@ -96,12 +96,15 @@ nav a{
   font-family:  'Montserrat', sans-serif;
   letter-spacing: 4px;
   margin-bottom: 40px;
+  color: #3d3d3d;
+  
 }
 .text-container-vert p{
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   text-align: center;
   margin-bottom: 40px;
+  color: #7c7c7d;
 }
 
 #song-container-vert{
@@ -130,7 +133,8 @@ nav a{
   letter-spacing: 3px;
   background-color: transparent;
   padding: 10px 30px;
-  transition: 0.2s
+  transition: 0.2s;
+  color: #3d3d3d;
 }
 .saber-mas-btn:hover{
   border: 3px #232323 solid;
@@ -279,12 +283,13 @@ footer{
   font-size: 2.5em;
   font-weight: 700;
   letter-spacing: 5px;
-  border: solid black 2px
+  border: solid black 2px;
+  color: #232323;
 }
 .movie-text-div h3{
   font-family: 'Open Sans', sans-serif;
   text-align: center;
- 
+  color: #232323;
 }
 
 .movie-info-poster{
@@ -306,6 +311,8 @@ footer{
   text-align: left;
   border: none;
   letter-spacing: 0px;
+  color: #232323;
+
 
 
 }
@@ -315,6 +322,8 @@ footer{
   margin-bottom: 0px;
   letter-spacing: 0px;
   font-weight: 500;
+  color: #232323;
+
 }
 .plot{
   margin-left: 30px;
@@ -326,12 +335,16 @@ footer{
   font-weight: 300;
   border: none;
   letter-spacing: 0px;
+  color: #232323;
+
 }
 .plot > h5{
   font-size: 1.2em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   text-align: center;
+  color: #232323;
+
 }
 .rates{
   display: flex;
@@ -342,6 +355,8 @@ footer{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   letter-spacing: 0px;
+  color: #232323;
+
 }
 
 .rates-type{
@@ -351,6 +366,8 @@ footer{
   font-size: 1em;
   border: none;
   letter-spacing: 0px;
+  color: #232323;
+
 
 }
 .movie-poster{
@@ -529,23 +546,23 @@ form input, .placeholder {
   height: 100vh;
   background-image: 
   radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%),
-    url('/css/images/jez-timms-_Ch_onWf38o-unsplash.jpg');
+    url('/css/images/sparkler-677774_1920.jpg');
 
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-position-x: 200px;
   background-color: black;
 }
 
 .title h1{
   color:white;
   font-family: 'Montserrat', sans-serif;
-  font-size: 7em;
+  font-size: 8em;
   font-weight: 700;
-  letter-spacing: 9px;
+  letter-spacing: 20px;
+  color:#dee0e2
 }
 .discover-section-one{
   background-color: #f8f9fa;
