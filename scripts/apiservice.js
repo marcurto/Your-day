@@ -190,7 +190,7 @@ function generateHTMLgenius(selectedElement){
 }
 
 function generateHTMLimdb(selectedMovie){
-    document.getElementById('movie-name-imdb').innerHTML = selectedMovie.Title;
+    document.getElementById('movie-name-imdb').innerHTML = selectedMovie.Title.toUpperCase();
     const movieImage = `<img src='${selectedMovie.Poster}'>`
     document.getElementById('movie-img').innerHTML = movieImage;
     document.getElementById('movie-year-imdb').innerHTML = selectedMovie.Year;
@@ -215,7 +215,6 @@ window.addEventListener('load', async (event) => {
     const params = new URLSearchParams(querystring);
     // Selecciono el paràmetre "date" (en aquest moment afegim els parámetres a la URL a mà per provar si funciona; després ho generaré desde l'index)
     const date = params.get('date');
-
 
     const allsongs = await getSongs();
     const currentSong = generateHTMLsongs(allsongs, date); // Guardem el return de la funció generateHTMLsongs

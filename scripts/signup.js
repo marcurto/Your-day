@@ -4,8 +4,7 @@
 class Signup {
   constructor () {
     this.nameInput = document.querySelector("#name");
-    this.pokemonInput = document.querySelector("#pokemon");
-    this.typeInput = document.querySelector("#type");
+   
     this.emailInput = document.querySelector("#email");
     this.passwordInput = document.querySelector("#password");
     this.repeatPasswordInput = document.querySelector("#repeat-password");
@@ -71,17 +70,16 @@ class Signup {
 
   // gestionar el envio de los datos (submit)
   saveData = (event) => {
+    console.log("HOLA")
     // Cuando el evento ocurre, cancelalo y no recargue la pagina
     event.preventDefault();
     // recoger los valores de cada input
     const name = this.nameInput.value;
-    const pokemon = this.pokemonInput.value;
-    const type = this.typeInput.value;
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
     const repeatPassword = this.repeatPasswordInput.value;
 
-    const newUser = new User(name, pokemon, type, email, password);
+    const newUser = new User(name, email, password);
 
     // guardar el nuevo usuario en la base de datos ( simulada :D )
     db.saveNewUser( newUser );
@@ -90,8 +88,6 @@ class Signup {
 
     // vaciar el form
     this.nameInput.value = "";
-    this.pokemonInput.value = "";
-    this.typeInput.value = "";
     this.emailInput.value = "";
     this.passwordInput.value = "";
     this.repeatPasswordInput.value = "";
@@ -99,8 +95,10 @@ class Signup {
     this.showSuccessMessage();
     this.removeMessages();
 
+    console.log("HOLA2");
     // reiniciar los errores del `validator`
     validator.resetValidator();
+
     // desactivar el botón Sign Up de nuevo
     this.buttonInput.disabled = true;
   }

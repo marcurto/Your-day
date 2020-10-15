@@ -5,7 +5,7 @@
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
-  color: rgb(27, 27, 29)
+  color: rgb(27, 27, 29);
 }
 
 h1 {
@@ -45,7 +45,8 @@ nav a{
   display: flex;
   height: 100%;
   flex-direction: column;
-  margin: 0px 90px;
+  margin: 20px 90px;
+  background-color: #f8f9f9;
 }
 .first-container-horit{
   display: flex;
@@ -118,7 +119,7 @@ nav a{
   background-position-y: center;
 }
 #book-container-vert{
-  background-image: url('/css/images/taylor-D9_QOTmbFAg-unsplash.jpg');
+  background-image: url('/css/images/neonbrand-JefwQx-85dQ-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -195,9 +196,9 @@ footer{
   background-repeat: no-repeat;
 }
 .music-text-div{
-  background-color: #303133;
+  background-color: white;
   width: 60%;
-  color: white;
+  color: #303133;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -258,14 +259,14 @@ footer{
 .movie-img-div{
   height: 100vh;
   width: 40%;
-  background-image: url('/css/images/denise-jans-9lTUAlNB87M-unsplash.jpg');
+  background-image: url('/css/images/jakob-owens-rEuVRj7qCbU-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .movie-text-div{
-  background-color: #16141b;
+  background-color: white;
   width: 60%;
-  color: white;
+  color: #16141b;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -273,12 +274,26 @@ footer{
   padding-top: 50px;
 }
 .movie-text-div h2{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: 5px;
+  border: solid black 2px
+}
+.movie-text-div h3{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+ 
 }
 
 .movie-info-poster{
   display: flex;
   margin-top: 30px;
+}
+.movie-info-poster img{
+    -webkit-filter: drop-shadow(5px 5px 5px #222 );
+    filter: drop-shadow(5px 5px 5px #222);
 }
 .movie-info{
   margin-left: 30px;
@@ -288,38 +303,45 @@ footer{
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 20px;
   font-weight: 200;
+  text-align: left;
+  border: none;
+  letter-spacing: 0px;
+
+
 }
 .movie-info > h5{
   font-size: 1em;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 0px;
-  letter-spacing: 3px;
+  letter-spacing: 0px;
   font-weight: 500;
 }
 .plot{
   margin-left: 30px;
-  margin-top: 30px
 }
 .plot > h2{
   font-size: 1.1em;
   font-family: 'Open Sans', sans-serif;
-  margin-bottom: 10px;
-  font-weight: 200;
+  margin-bottom: 0px 10px;
+  font-weight: 300;
+  border: none;
+  letter-spacing: 0px;
 }
 .plot > h5{
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  text-align: center;
 }
 .rates{
   display: flex;
-  margin-top:20px;
-  margin-bottom: 30px;
+  margin: 30px 0px
 }
 .rate-name h5{
   font-size: 1em;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
+  letter-spacing: 0px;
 }
 
 .rates-type{
@@ -327,6 +349,9 @@ footer{
 }
 .rates-type h2{
   font-size: 1em;
+  border: none;
+  letter-spacing: 0px;
+
 }
 .movie-poster{
   margin-left: 20px;
@@ -494,6 +519,11 @@ form input, .placeholder {
 .button a:hover{
   text-decoration: none;
 }
+.message-container{
+  color: white;
+  font-family: 'Montserrat', sans-serif;;
+}
+
 /* Home */
 .title{
   height: 100vh;
@@ -590,8 +620,192 @@ form input, .placeholder {
   background-color: blue;
   margin-right: 40px;
 }
+footer{
+  margin-top: 150px
+}
 
-/* MOdificaciones Bootstrap */
- .bg-dark{
-  background-color: red;
+/* Responsive */
+/* Sign Up */
+@media screen and (max-width: 800px){
+ .mini-login-div{
+   width: 700px;
+ }
+  .login-img {
+    width: 170px;
+  }
+  
+  .login-img h1{
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .mini-login-div{
+    width: 700px;
+    flex-direction: column;
+  }
+   .login-img {
+     overflow: hidden;
+   }
+   
+   .login-img h1{
+    overflow: hidden;
+  }
+ }
+ @media screen and (max-width: 450px){
+  .login{
+    padding: 10px 20px
+  }
+  .mini-login-div{
+    width: 700px;
+    flex-direction: column;
+  }
+  form{
+    padding: 0px 20px
+  }
+  .mini-login-div input{
+    width: 300px;
+    margin: 5px;
+
+  }
+   .login-img {
+     overflow: hidden;
+   }
+   
+   .login-img h1{
+    overflow: hidden;
+  }
+  .message-container p{
+    margin: 5px 30px;
+    font-size: 0.8em;
+  }
+ }
+
+ /* Faqs */
+ @media screen and (max-width: 1000px){
+   .faqs-img{
+     display: none;
+   }
+ }
+ @media screen and (max-width: 700px){
+  .faqs-img{
+    display: none;
+  }
+  .question-items{
+    margin: 40px 10px;
+  }
+  .question h4{
+    font-size: 1.2em;
+  }
+  .answer p{
+    font-size: 0.9em;
+  }
+}
+
+/* Discover */
+@media screen and (max-width: 850px){
+  .first-container-horit{
+    flex-direction: column;
+  }
+  .second-container-horit{
+    flex-direction: column-reverse;
+  }
+  .third-container-horit{
+    flex-direction: column;
+  }
+  .elements-container{
+    width: 100%;
+    margin: 0px 0px;
+  }
+  .foto-container-vert{
+    width: 100%;
+  }
+
+  .text-container-vert{
+    width: 100%;
+  }
+  
+}
+
+/* Discover pop-up movies */
+@media screen and (max-width: 1100px){
+  
+  .movie-text-div{
+    padding-top: 30px;
+  }
+  .movie-text-div h3{
+    font-size: 1.2em;
+  }
+  .movie-info > h2{
+    font-size: 1em;
+  }
+  .movie-info > h5{
+    font-size: 0.8em;
+  }
+  .plot{
+    margin: 0 30px;
+  }
+  .plot > h2{
+    font-size: 1em;
+  }
+  .plot > h5{
+    font-size: 0.8em;
+  }
+  .rates-type{
+    margin: 30px 10px;
+  }
+  #movie-img img{
+    width: 230px;
+  }
+  .close-pop-btn{
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 900px){
+  .rates-type{
+    margin: 10px 10px;
+  }  
+  .close-pop-btn{
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 850px){
+  .movie-img-div{
+    display: none;
+  }
+  .movie-text-div{
+    width: 100%;;
+  }
+  .close-pop-btn{
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 550px){
+  .full-screen{
+    height: 100%;
+  }
+  .movie-elements{
+    height: 100%;
+  }
+  .movie-text-div{
+    display: flex;
+    height: 1400px;
+  }
+  .movie-poster{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+  }
+  #movie-img img{
+    width: 300px;
+    margin-bottom: 30px;
+  }
+  .movie-info-poster{
+    flex-direction: column;
+  }
+  .movie-info{
+    margin-right: 10px;
+  }
+ 
 }

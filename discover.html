@@ -4,150 +4,294 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-copy.css" />
+    <!-- bootstrap 4 css -->
     <link
       rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"> 
     <title>Your Day | Discover</title>
   </head>
-
-  <!-- <body style="overflow: hidden;"> -->
-  <body style="overflow: hidden">
-    <div class="row">
-      <div id="songs" class="box">
-        <div class="front">
-          <h1>
-            ¿Qué <span>canción</span> sonaba por todas parte cuando naciste?
-          </h1>
-          <!-- <button>Descubrir</button> -->
+  <body>
+    
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div
+          class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
+        ></div>
+        <div class="mx-auto order-0">
+          <a class="navbar-brand mx-auto" href="#"></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target=".dual-collapse2"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="discover.html">DISCOVER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faqs.html">FAQS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">LOG IN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup.html">REGISTER</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
 
-        <div class="back">
-          <h3>La canción más escuchada el día que naciste fue...</h3>
-          <h2 id="song-name"></h2>
-          <div id="album-img"></div>
-          <h4 id="album-name"></h4>
-          <button onclick="showPopup('#music')" id="btn-song">Saber más</button>
+    <!-- Principal page -->
+    <div class="elements-container">
+      <div class="first-container-horit">
+        <div class="foto-container-vert" id="song-container-vert">
+          <h2>THE SONG</h2>
+        </div>
+        <div class="text-container-vert">
+          <h4>DISCOVER THE SONG</h4>
+          <p>
+            “Music is a language that doesn’t speak in particular words. It
+            speaks in emotions, and if it’s in the bones, it’s in the bones.” -
+            Keith Richards
+          </p>
+          <button onclick="showPopup('#music')" class="saber-mas-btn">
+            LEARN MORE
+          </button>
         </div>
       </div>
-
-
-
-
-      <div id="movies" class="box">
-        <div class="front">
-          <h1>¿Para qué <span>película</span> hacían todos cola en el cine?</h1>
-          <!-- <button>Descubrir</button>       -->
+      <div class="second-container-horit">
+        <div class="text-container-vert">
+          <h4>DISCOVER THE MOVIE</h4>
+          <p>
+            Photography is truth. The cinema is truth twenty-four times per
+            second. - Jean-Luc Godard
+          </p>
+          <button onclick="showPopup('#movie')" class="saber-mas-btn">
+            LEARN MORE
+          </button>
         </div>
-        <div class="back">
-          <h3>La película más vista el día que naciste fue...</h3>
-          <h2 id="movie-name"></h2>
-          <div id="movie-img"></div>
-          <button onclick="showPopup('#movie')">Saber más</button>
+        <div class="foto-container-vert" id="movie-container-vert">
+          <h2>THE MOVIE</h2>
         </div>
       </div>
-
-
-
-      <div id="books" class="box">
-        <div class="front">
-          <h1>
-            ¿Cuál era el <span>libro</span> que todos estaban ansiosos por leer?
-          </h1>
-          <!-- <button>Descubrir</button>       -->
+      <div class="third-container-horit">
+        <div class="foto-container-vert" id="book-container-vert">
+          <h2>THE BOOK</h2>
         </div>
-        <div class="back">
-          <h3>El libro de ficción más leído el día que naciste fue...</h3>
-          <h2 id="fiction-book-name"></h2>
-          <!-- <img src="css/images/gray.jpg" /> -->
-          <h4 id="writter-name"></h4>
-          <h2 id="no-fiction-book-name"></h2>
-          <!-- <img src="css/images/gray.jpg" /> -->
-          <h4 id="writter-name-no-fiction"></h4>
-
-          <button onclick="showPopup('#fiction-books')">Saber más</button>
+        <div class="text-container-vert">
+          <h4>DISCOVER THE BOOKS</h4>
+          <p>
+            Books are the quietest and most constant of friends; they are the
+            most accessible and wisest of counselors, and the most patient of
+            teachers. - Charles W. Eliot
+          </p>
+          <button onclick="showPopup('#fiction-books')" class="saber-mas-btn">
+            LEARN MORE
+          </button>
         </div>
       </div>
     </div>
 
+    <!-- Pop up -->
     <div>
-
       <div class="full-screen hidden" id="music">
-        <div class="discover-left">
-          <h2 id="song-name-genius"></h2>
-          <h3 id="artist-name-genius"></h3>
-          <div class="song-video">
-            <iframe
-              width="650"
-              height="420"
-              src="//www.youtube.com/embed/58-atNakMWw"
+        <div class="music-elements">
+
+
+
+          <div class="music-img-div">
+
+          </div>
+          <div class="music-text-div">
+            <h3>THE MOST PROMINENT SONG WAS...</h3>
+            <h2 id="song-name-genius"></h2>
+            <h3 id="artist-name-genius"></h3>
+            <div class="song-video">
+              <iframe
+              width="550"
+              height="320"
+              src=""
               frameborder="0"
               allowfullscreen
-            ></iframe>
+            ></iframe>            
           </div>
-        </div>
-        <div class="discover-rigth">
-          <div id="artist-image"></div>
-          <div id="cd-name"></div>
-          <div id="cd-image"></div>
-          <!-- <div id="number-one"></div> -->
-          <div id="release-date"></div>
-          <div id="song-tag"></div>
-          <div id="days-number-one"></div>
-        
-          <button onclick="closePopup('#music')">Close Popup!</button>
+            <!-- <div id="artist-image" ></div> -->
+            <div class="album-dades">
+              <div class="album-dades-img">
+                <div id="cd-image"></div>
+              </div>
+              <div class="album-dades-text">
+                <h5>ALBUM NAME:</h5>
+                <h6 id="cd-name"></h6>
+
+                <!-- <div id="number-one"></div> -->
+                <h5>RELEASE DATE:</h5>
+                <h6 id="release-date"></h6>
+                <h5>IT WAS NUMBER ON...</h5>
+                <h6 id="days-number-one"></h6>
+              </div>
+            </div>
+
+            <button onclick="closePopup('#music')" class="close-pop-btn">
+              GO BACK
+            </button>
+          </div>
+
+
+
+
         </div>
       </div>
 
-      <div class="full-screen hidden flex-container-center" id="movie">
-        <h2 id="movie-name-imdb"></h2>
-        <h2 id="movie-year-imdb"></h2>
-        <h2 id="movie-released-imdb"></h2>
-        <h2 id="movie-runtime-imdb"></h2>
-        <h2 id="movie-genre-imdb"></h2>
-        <h2 id="movie-director-imdb"></h2>
-        <h2 id="movie-actors-imdb"></h2>
-        <h2 id="movie-plot-imdb"></h2>
-        <h2 id="movie-country-imdb"></h2>
-        <h2 id="movie-rate-1-imdb"></h2>
-        <h2 id="movie-rate-2-imdb"></h2>
-        <h2 id="movie-rate-3-imdb"></h2>
-        <h2 id="movie-rate-4-imdb"></h2>
+      <div class="full-screen hidden" id="movie">
+        <div class="movie-elements">
+          <div class="movie-img-div">
+
+          </div>
 
 
-        <button onclick="closePopup('#movie')">Close Popup!</button>
+
+
+          <div class="movie-text-div">
+            <div>
+            <h3>THE MOST PROMINENT MOVIE WAS...</h3>
+            <h2 id="movie-name-imdb"></h2>
+          </div>
+            <div class="movie-info-poster">
+
+              <div class="movie-poster">
+                <div id="movie-img"></div>
+              </div>
+
+              <div class="movie-info">
+                <h5>YEAR:</h5>
+                <h2 id="movie-year-imdb"></h2>
+                <h5>DATE RELEASED:</h5>
+                <h2 id="movie-released-imdb"></h2>
+                <h5>RUNTIME:</h5>
+                <h2 id="movie-runtime-imdb"></h2>
+                <h5>GENRE:</h5>
+                <h2 id="movie-genre-imdb"></h2>
+                <h5>DIRECTOR:</h5>
+                <h2 id="movie-director-imdb"></h2>
+                <h5>ACTORS:</h5>
+                <h2 id="movie-actors-imdb"></h2>
+                <h5>COUNTRY:</h5>
+                <h2 id="movie-country-imdb"></h2>
+               
+            </div>
+          </div>
+              <div class="plot">
+                <h5>PLOT:</h5>
+                <h2 id="movie-plot-imdb"></h2>
+              </div>
+              <div class="rates">
+                <div class="rates-type">
+                  <div class="rate-name">
+                    <h5>Internet Movie Database</h5>
+                  </div>
+                <h2 id="movie-rate-1-imdb"></h2>
+              </div>
+                <div class="rates-type">
+                  <div class="rate-name">
+                    <h5>Rotten Tomatoes</h5>
+                  </div>
+                <h2 id="movie-rate-2-imdb"></h2>
+              </div>
+                <div class="rates-type">
+                  <div class="rate-name">
+                    <h5>Metacritic</h5>
+                  </div>
+                <h2 id="movie-rate-3-imdb"></h2>
+              </div>
+                <div class="rates-type">
+                  <div class="rate-name">
+                    <h5>IMDB</h5>
+                  </div>
+                <h2 id="movie-rate-4-imdb"></h2>
+              </div>
+            </div>
+            <button onclick="closePopup('#movie')" class="close-pop-btn">
+              GO BACK
+            </button>
+          </div>
+              </div>
+            
+          </div>
+          
+        </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+      
 
       <div class="full-screen hidden flex-container-center" id="fiction-books">
         <h4>Let me book you about this thing!!</h4>
-        <button onclick="closePopup('#fiction-books')">Close Popup!</button>
+        <button onclick="closePopup('#fiction-books')" class="close-pop-btn">
+          GO BACK
+        </button>
       </div>
-      
     </div>
-    <!-- <script src="scripts/apiservice.js"></script> -->
+
+    <!--Footer-->
+    <footer>
+      <h1>FOOTER</h1>
+    </footer>
+
+    <script src="scripts/apiservice.js"></script>
     <script>
       function showPopup(id) {
         document.querySelector(id).classList.remove("hidden");
-        console.log(songs_all);
       }
 
       function closePopup(id) {
         document.querySelector(id).classList.add("hidden");
       }
     </script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -3,48 +3,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-copy.css" />
+  <!-- bootstrap 4 css -->
   <link
-      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"> 
   <title>Your Day | Faqs</title>
 </head>
 <body>
-  <header class="faqs-header">
-    <nav>
-      <div class="nav-bar">
-        <div class="logo-text">
-          <a href="index.html"><h2>YOUR DAY</h2></a>
-        </div>
-        <div class="menu-items">
-          <a href="index.html" target="_blank">Your Day </a>
-          <a href="discover.html" target="_blank">Descubrir</a>
-          <a href="faqs.html" target="_blank">Faqs</a>
-          <a href="login.html" target="_blank">Log In</a>
-          <a href="signup.html" target="_blank">Sign Up</a>
-        </div>
-      </div>
-    </nav>
-    <div class="title-faqs">
-      <h1 >PREGUNTAS MÁS FRECUENTES</h1>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div
+      class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
+    ></div>
+    <div class="mx-auto order-0">
+      <a class="navbar-brand mx-auto" href="#"></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".dual-collapse2"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="discover.html">DISCOVER</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faqs.html">FAQS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">LOG IN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signup.html">REGISTER</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <header class="faqs-header">
+    <h1>FREQUENTLY ASKED QUESTIONS</h1>
   </header>
   <section>
     <div class="faqs">
       <div class="faqs-content">
-        <h2>¿Qué nos suelen preguntar nuestros usuarios?</h2>
+        
         <div class="question-items">
           <div class="question">
-            <h4>¿Para qué funciona Your Day </h4>
+            <h4>¿WHAT IS YOUR DAY? </h4>
           </div>
           <div class="answer">
             <p>Your Day es una página web de tipo entretenimiento que te permite conocer qué canción era la que más sonaba el día que naciste, qué película era la más vista y que libro era el más vendido. </p>
@@ -52,7 +69,7 @@
         </div>
         <div class="question-items">
           <div class="question">
-            <h4>¿Qué funcionalidades tiene? </h4>
+            <h4>¿WHAT DOES YOUR DAY OFFERS YOU? </h4>
           </div>
           <div class="answer">
             <p>A parte de mostrarte estos tres elementos, también muestra algunas de sus curiosidaes y te permite registrarte e iniciar sesión. </p>
@@ -60,7 +77,7 @@
         </div>
         <div class="question-items">
           <div class="question">
-            <h4>¿Qué orígen tiene la información de Your Day? </h4>
+            <h4>¿WHAT IS THE ORIGIN OF YOUR DAY DATA? </h4>
           </div>
           <div class="answer">
             <p>Your Day obtiene toda su información a través de diferentes APIs. Por ejemplo, utiliza una API de creación propia a partir de datos obtenidos de Billaboard, la API de Genius o la API de iMDB. </p>
@@ -69,7 +86,7 @@
         </div>
         <div class="question-items">
           <div class="question">
-            <h4>¿Quién es el autor de la web? </h4>
+            <h4>¿WHO IS THE AUTHOR OF THE WEB? </h4>
           </div>
           <div class="answer">
             <p>El autor de esta web es un estudiante de IronHack del Bootcamp de Web Development :)</p>
@@ -78,7 +95,7 @@
         </div>
         <div class="question-items">
           <div class="question">
-            <h4>¿Como será este web en el futuro?</h4>
+            <h4>¿WHAT WILL THIS WEBSITE BE LIKE IN THE FUTURE?</h4>
           </div>
           <div class="answer">
             <p>Este es uno de los primeros proyectos como programadora que hago, así que en un futuro, ¡va a tener muchas más funcionalidades!</p>
@@ -86,7 +103,7 @@
         </div>
       </div>
       <div class="faqs-img">
-        <img src="css/images/fruta.jpg" />
+        <img src="css/images/john-schnobrich-bNCKsUyQYmM-unsplash.jpg" />
       </div>
     </div>
   </section>
@@ -95,4 +112,26 @@
 
     </div>
   </footer>
+
+
+
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"
+></script>
+
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"
+></script>
+
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"
+></script>
 </body>
