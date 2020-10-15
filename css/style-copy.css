@@ -108,21 +108,21 @@ nav a{
 }
 
 #song-container-vert{
-  background-image: url('css/images/bogomil-mihaylov-ekHSHvgr27k-unsplash.jpg');
+  background-image: url('images/bogomil-mihaylov-ekHSHvgr27k-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
 }
 #movie-container-vert{
-  background-image: url('css/images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg');
+  background-image: url('images/felix-mooneeram-evlkOfkQ5rE-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
 }
 #book-container-vert{
-  background-image: url('css/images/neonbrand-JefwQx-85dQ-unsplash.jpg');
+  background-image: url('images/neonbrand-JefwQx-85dQ-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -195,7 +195,7 @@ footer{
 .music-img-div{
   height: 100vh;
   width: 40%;
-  background-image: url('css/images/alasdair-elmes-xez-RVM6wz0-unsplash.jpg');
+  background-image: url('images/alasdair-elmes-xez-RVM6wz0-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -263,7 +263,7 @@ footer{
 .movie-img-div{
   height: 100vh;
   width: 40%;
-  background-image: url('css/images/jakob-owens-rEuVRj7qCbU-unsplash.jpg');
+  background-image: url('images/jakob-owens-rEuVRj7qCbU-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -546,7 +546,7 @@ form input, .placeholder {
   height: 100vh;
   background-image: 
   radial-gradient(ellipse at center, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%),
-    url('css/images/sparkler-677774_1920.jpg');
+    url('images/sparkler-677774_1920.jpg');
 
   background-size: cover;
   background-repeat: no-repeat;
