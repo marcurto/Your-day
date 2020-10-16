@@ -223,7 +223,8 @@ function generateGoogleBooksInfoNF(allfictionbooks){
     document.getElementById('publishedDate2').innerHTML = allfictionbooks.volumeInfo.publishedDate
     const nofictionBook = `<img src='${allfictionbooks.volumeInfo.imageLinks.thumbnail}'>`
     document.getElementById('no-fiction-img').innerHTML = nofictionBook;
-    document.getElementById('categoria2').innerHTML = allfictionbooks.volumeInfo.averageRating
+    document.getElementById('categoria2').innerHTML = allfictionbooks.volumeInfo.categories[0]
+    document.getElementById('average-rate2').innerHTML = allfictionbooks.volumeInfo.averageRating
     
 }
 

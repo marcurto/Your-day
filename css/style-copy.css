@@ -203,7 +203,7 @@ nav a{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #343a40;
 }
 .hidden {
   display: none;
