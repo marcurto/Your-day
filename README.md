@@ -3,7 +3,7 @@
 ## 
 
 ## Description
-<img src="css\images\portada-readme-jpg" />
+<img src="css\images\portada-readme.jpg" />
 
 Would you like to know which song was the most listened to the day you were born? Or the most watched movie? In **Yourday** you will be able to find out.
 
