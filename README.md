@@ -23,7 +23,9 @@ The **MVP** will cover the following:
 
 ## Backlog
 
-Extra features you want to add once your MVP is done
+Extra features you want to add once your MVP is done:
+- Add the functionality "Send your greeting"
+- Improve and optimize your code
 
 ## 
 
@@ -35,7 +37,23 @@ Extra features you want to add once your MVP is done
 
 ## Data structure
 
-Classes and methods definition
+**root**/
+
+- index.html
+- discover.html
+- faqs.html
+- login-html
+- signup.html
+- **css**/
+  - img/
+  - style.css
+- scripts/
+  - apiservice.js
+  - database.js
+  - login.js
+  - signup.js
+  - user.js
+  - validator.js
 
 ## 
 
@@ -44,6 +62,9 @@ Classes and methods definition
 The API(s) that I am using:
 
 - https://best-songs2.herokuapp.com
+- https://api.genius.com
+- https://movie-database-imdb-alternative.p.rapidapi.com/
+- https://www.googleapis.com/books/
 
 ## 
 
@@ -65,4 +86,4 @@ https://github.com/marcurto/ProyectoIronHack
 
 ### Slides
 
-URls for the project presentation (slides) [Link Slides.com](http://slides.com)
+URls for the project presentation (slides): [https://docs.google.com/presentation/d/1LinNUtmmSGFyctQHjfClTls22Wyx8X8U/edit?dls=true] (https://docs.google.com/presentation/d/1LinNUtmmSGFyctQHjfClTls22Wyx8X8U/edit?dls=true)
