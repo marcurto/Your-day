@@ -7,7 +7,7 @@
 
 Would you like to know which **song** was the most listened to the day you were born? Or the most watched **movie**? Or the best selling **book**? In **Yourday** you will be able to find out.
 
-On this website you can find out only by entering the date of your birth. Let's enjoy it!
+On this website you can find out only by entering the date of your birth. In addition, you will also be able to know curiosities such as how long the song was number one, a short synopsis of the film or its scores, or what genre and what score the book obtained, among other things. Let's enjoy it!
 
 Your day was developed using HTML, CSS and JavaScript as a part of the Ironhack Web Development Bootcamp (WebDev-FT-0920).
 
