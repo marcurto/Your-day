@@ -86,4 +86,5 @@ https://github.com/marcurto/ProyectoIronHack
 
 ### Slides
 
-URls for the project presentation (slides): [https://docs.google.com/presentation/d/1LinNUtmmSGFyctQHjfClTls22Wyx8X8U/edit?dls=true] (https://docs.google.com/presentation/d/1LinNUtmmSGFyctQHjfClTls22Wyx8X8U/edit?dls=true)
+URls for the project presentation (slides): 
+https://docs.google.com/presentation/d/1LinNUtmmSGFyctQHjfClTls22Wyx8X8U/edit?dls=true
