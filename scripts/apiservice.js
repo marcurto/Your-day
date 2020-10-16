@@ -158,7 +158,7 @@ function generateHTMLfictionbooks(data, date) {
         }
         return false;
     })
-    document.getElementById('fiction-book-name').innerHTML = fictionBookDate[0].title
+    document.getElementById('fiction-book-name').innerHTML = fictionBookDate[0].title.toUpperCase();
     document.getElementById('writter-name').innerHTML = fictionBookDate[0].author
 
     return fictionBookDate[0]
@@ -173,7 +173,7 @@ function generateHTMLnofictionbooks(data, date) {
         }
         return false;
     })
-    document.getElementById('no-fiction-book-name').innerHTML = noFictionBookDate[0].title
+    document.getElementById('no-fiction-book-name').innerHTML = noFictionBookDate[0].title.toUpperCase();
     document.getElementById('writter-name-no-fiction').innerHTML = noFictionBookDate[0].author
 
     return noFictionBookDate[0]
