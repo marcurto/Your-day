@@ -5,7 +5,7 @@
 ## Description
 <img src="css\images\portada-readme.jpg" />
 
-Would you like to know which song was the most listened to the day you were born? Or the most watched movie? In **Yourday** you will be able to find out.
+Would you like to know which song was the most listened to the day you were born? Or the most watched movie? In **Your** **Day** you will be able to find out.
 
 Your day was developed using HTML, CSS and JavaScript as a part of the Ironhack Web Development Bootcamp (WebDev-FT-0920) using X API.
 
