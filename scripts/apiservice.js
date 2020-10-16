@@ -158,8 +158,8 @@ function generateHTMLfictionbooks(data, date) {
         }
         return false;
     })
-    // document.getElementById('fiction-book-name').innerHTML = fictionBookDate[0].title
-    // document.getElementById('writter-name').innerHTML = fictionBookDate[0].author
+    document.getElementById('fiction-book-name').innerHTML = fictionBookDate[0].title
+    document.getElementById('writter-name').innerHTML = fictionBookDate[0].author
 
     return fictionBookDate[0]
 }
@@ -173,8 +173,8 @@ function generateHTMLnofictionbooks(data, date) {
         }
         return false;
     })
-    // document.getElementById('no-fiction-book-name').innerHTML = noFictionBookDate[0].title
-    // document.getElementById('writter-name-no-fiction').innerHTML = noFictionBookDate[0].author
+    document.getElementById('no-fiction-book-name').innerHTML = noFictionBookDate[0].title
+    document.getElementById('writter-name-no-fiction').innerHTML = noFictionBookDate[0].author
 
     return noFictionBookDate[0]
 }
@@ -210,6 +210,22 @@ function generateHTMLimdb(selectedMovie){
     document.getElementById('movie-rate-3-imdb').innerHTML = selectedMovie.Ratings[2].Value;
     document.getElementById('movie-rate-4-imdb').innerHTML = selectedMovie.imdbRating;
 }
+function generateGoogleBooksInfo(allfictionbooks){
+    document.getElementById('publishedDate').innerHTML = allfictionbooks.volumeInfo.publishedDate
+    const fictionBook = `<img src='${allfictionbooks.volumeInfo.imageLinks.thumbnail}'>`
+    document.getElementById('fiction-img').innerHTML = fictionBook;
+    document.getElementById('categoria').innerHTML = allfictionbooks.volumeInfo.categories[0]
+    document.getElementById('average-rate').innerHTML = allfictionbooks.volumeInfo.averageRating
+  
+}
+
+function generateGoogleBooksInfoNF(allfictionbooks){
+    document.getElementById('publishedDate2').innerHTML = allfictionbooks.volumeInfo.publishedDate
+    const nofictionBook = `<img src='${allfictionbooks.volumeInfo.imageLinks.thumbnail}'>`
+    document.getElementById('no-fiction-img').innerHTML = nofictionBook;
+    document.getElementById('categoria2').innerHTML = allfictionbooks.volumeInfo.averageRating
+    
+}
 
 
 window.addEventListener('load', async (event) => {
@@ -228,19 +244,20 @@ window.addEventListener('load', async (event) => {
 
     const allmovies = await getMovies();
     const selectedMovie = generateHTMLmovies(allmovies, date);
-
     const responsejsons = await getIMDBElements(selectedMovie.movieTitle);
     generateHTMLimdb(responsejsons)
 
     const allfictionbooks = await getFictionBooks();
     const book =generateHTMLfictionbooks(allfictionbooks, date);
     const detailBook = await getGoogleBooks(book.title);
+    generateGoogleBooksInfo(detailBook)
     
 
     const allnofictionbooks = await getnoFictionBooks();
     const book2 = generateHTMLnofictionbooks(allnofictionbooks, date);
     const detailBook2 = await getGoogleBooks(book2.title);
-    console.log(detailBook2)
+    generateGoogleBooksInfoNF(detailBook2)
+
 
 });
 

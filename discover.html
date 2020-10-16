@@ -99,8 +99,8 @@
             most accessible and wisest of counselors, and the most patient of
             teachers. <br>Charles W. Eliot
           </p>
-          <button class="saber-mas-btn-coming">
-            COMING SOON...
+          <button onclick="showPopup('#fiction-books')" class="saber-mas-btn">
+            LEARN MORE
           </button>
         </div>
       </div>
@@ -110,18 +110,13 @@
     <div>
       <div class="full-screen hidden" id="music">
         <div class="music-elements">
-
-
-
           <div class="music-img-div">
-
           </div>
           <div class="music-text-div">
             <h3>The most important song was...</h3>
             <h2 id="song-name-genius"></h2>
             <h3 id="artist-name-genius"></h3>
             <div id="song-video">
-            
           </div>
             <!-- <div id="artist-image" ></div> -->
             <div class="album-dades">
@@ -131,7 +126,6 @@
               <div class="album-dades-text">
                 <h5>ALBUM NAME:</h5>
                 <h6 id="cd-name"></h6>
-
                 <!-- <div id="number-one"></div> -->
                 <h5>RELEASE DATE:</h5>
                 <h6 id="release-date"></h6>
@@ -233,25 +227,48 @@
           
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
+     
 
       
 
       <div class="full-screen hidden flex-container-center" id="fiction-books">
-        <h4>Let me book you about this thing!!</h4>
+        <div class="book-elements">
+        <div class="books-image">
+
+        </div>
+        <div class="book-text">
+          <div class="all-book">
+            <div class="only-img">
+              <div id="fiction-img"></div>
+            </div>
+            <div class="only-info">
+              <h2 id="fiction-book-name"></h2>
+              <h3 id="writter-name"></h3>
+              <h3 id="publishedDate"></h3>
+              <h3 id="categoria"></h3>
+              <h3 id="average-rate"></h3>
+            </div>
+          </div>
+          <div class="all-book">
+
+            <div class="only-img">
+              <div id="no-fiction-img"></div>
+            </div>
+            <div class="only-info">
+            <h2 id="no-fiction-book-name"></h2>
+            <h3 id="writter-name-no-fiction"></h3>
+            <h3 id="publishedDate2"></h3>
+            <h3 id="categoria2"></h3>
+            <h3 id="average-rate2"></h3>
+          </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
         <button onclick="closePopup('#fiction-books')" class="close-pop-btn">
           GO BACK
         </button>

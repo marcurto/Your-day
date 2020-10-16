@@ -39,12 +39,12 @@ class Login {
     if (user) {
       // si el usuario inicia la sesion con exito
       // agrega la clase para cambiar el color y sobrescribir el estilo anterior
-      message.innerHTML = `hola, ${user.email}`;
+      message.innerHTML = `Hello, ${user.email}`;
       message.classList.add("correct-message");
     }
     else {
       // si el inicio de sesión no se ha realizado correctamente
-      message.innerHTML = 'el email o/y password son incorectos';
+      message.innerHTML = 'The email or / and password are incorrect';
     }
 
     this.messageContainer.appendChild(message);
